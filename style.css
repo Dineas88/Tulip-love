@@ -26,7 +26,7 @@ h1 {
 /* Stem */
 .stem {
   width: 6px;
-  height: 180px;
+  height: 120px;
   background: #2e7d32;
   margin: auto;
 }
@@ -58,7 +58,7 @@ h1 {
   width: 50px;
   height: 60px;
   background: #ff4d6d;
-  top: -10px;              /* 🔥 better position */
+  top: 20px;              /* 🔥 better position */
   left: 35px;
   border-radius: 50% 50% 40% 40%;
   z-index: 10;
