@@ -54,12 +54,12 @@ h1 {
 
 .tulip-head {
   position: absolute;
-  width: 60px;
-  height: 65px;
+  width: 50px;
+  height: 60x;
   background: #ff4d6d;
-  top: 10px;
-  left: 30px;
-  border-radius: 50% 50% 45% 45%;
+  top: 40px;
+  left: 35px;
+  border-radius: 50% ;
   z-index: 10;
 }
 
@@ -67,10 +67,10 @@ h1 {
 .tulip-head::before {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background: #ff4d6d;
-  top: -10px;
+  top: -8px;
   left: 5px;
   border-radius: 50%;
 }
@@ -79,10 +79,10 @@ h1 {
 .tulip-head::after {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background: #ff4d6d;
-  top: -10px;
+  top: -8px;
   right: 5px;
   border-radius: 50%;
 }
