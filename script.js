@@ -4,10 +4,7 @@ function createTulip(x) {
   tulip.style.left = x + "vw";
 
   tulip.innerHTML = `
-    <div class="stem"></div>
-    <div class="leaf left"></div>
-    <div class="leaf right"></div>
-    <div class="tulip-head"></div>
+    <div style="font-size:50px;">🌷</div>
   `;
 
   document.body.appendChild(tulip);
@@ -24,7 +21,6 @@ function createHeart(x, y) {
   setTimeout(() => heart.remove(), 3000);
 }
 
-/* SINGLE CLICK EVENT ONLY */
 document.addEventListener("click", (e) => {
   createTulip(Math.random() * 90);
 
