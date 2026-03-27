@@ -51,25 +51,26 @@ h1 {
   transform: rotate(30deg);
 }
 
-/* 🌷 REAL TULIP HEAD */
+/* 🌷 Tulip Head */
 .tulip-head {
   position: absolute;
-  width: 60px;
-  height: 70px;
-  background: linear-gradient(to top, #ff4d6d, #ff8fab);
-  top: 40px;
-  left: 30px;
+  width: 50px;
+  height: 60px;
+  background: #ff4d6d;
+  top: 20px;
+  left: 35px;
   border-radius: 50% 50% 40% 40%;
+  z-index: 5;
 }
 
-/* top bump (emoji look) */
+/* top curve */
 .tulip-head::before {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 30px;
-  background: inherit;
-  top: -15px;
+  width: 30px;
+  height: 25px;
+  background: #ff4d6d;
+  top: -12px;
   left: 10px;
   border-radius: 50%;
 }
@@ -82,12 +83,6 @@ h1 {
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-200px); opacity: 0; }
 }
