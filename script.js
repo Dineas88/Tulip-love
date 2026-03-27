@@ -4,7 +4,7 @@ function createTulip(x) {
   tulip.style.left = x + "vw";
 
   tulip.innerHTML = `
-    <div style="font-size:80px;">🌷</div>
+    <div style="font-size:100px;">🌷</div>
   `;
 
   document.body.appendChild(tulip);
