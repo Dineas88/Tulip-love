@@ -52,18 +52,40 @@ h1 {
   transform: rotate(30deg);
 }
 
-/* 🌷 Tulip Head */
 .tulip-head {
   position: absolute;
-  width: 50px;
-  height: 60px;
+  width: 60px;
+  height: 65px;
   background: #ff4d6d;
-  top: 20px;              /* 🔥 better position */
-  left: 35px;
-  border-radius: 50% 50% 40% 40%;
+  top: 10px;
+  left: 30px;
+  border-radius: 50% 50% 45% 45%;
   z-index: 10;
 }
 
+/* LEFT bump */
+.tulip-head::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #ff4d6d;
+  top: -10px;
+  left: 5px;
+  border-radius: 50%;
+}
+
+/* RIGHT bump */
+.tulip-head::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #ff4d6d;
+  top: -10px;
+  right: 5px;
+  border-radius: 50%;
+}
 /* top bump */
 .tulip-head::before {
   content: "";
