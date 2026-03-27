@@ -14,91 +14,27 @@ h1 {
   font-size: 28px;
 }
 
-/* Tulip container */
+/* 🌷 Emoji Tulip */
 .tulip {
   position: absolute;
-  bottom: 0;
-  width: 120px;
-  height: 300px;
+  bottom: 10px;
   transform: translateX(-50%);
+  animation: rise 6s ease-out forwards;
 }
 
-/* Stem */
-.stem {
-  width: 6px;
-  height: 120px;
-  background: #2e7d32;
-  margin: auto;
+/* Floating animation */
+@keyframes rise {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -300px);
+    opacity: 0;
+  }
 }
 
-/* Leaves */
-.leaf {
-  width: 50px;
-  height: 25px;
-  background: #388e3c;
-  position: absolute;
-  top: 140px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.leaf.left {
-  left: -35px;
-  transform: rotate(-30deg);
-}
-
-.leaf.right {
-  right: -35px;
-  transform: rotate(30deg);
-}
-
-.tulip-head {
-  position: absolute;
-  width: 50px;
-  height: 60x;
-  background: #ff4d6d;
-  top: 40px;
-  left: 35px;
-  border-radius: 50% ;
-  z-index: 10;
-}
-
-/* LEFT bump */
-.tulip-head::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #ff4d6d;
-  top: -8px;
-  left: 5px;
-  border-radius: 50%;
-}
-
-/* RIGHT bump */
-.tulip-head::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #ff4d6d;
-  top: -8px;
-  right: 5px;
-  border-radius: 50%;
-}
-/* top bump */
-.tulip-head::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 25px;
-  background: #ff4d6d;
-  top: -12px;
-  left: 10px;
-  border-radius: 50%;
-}
-
-/* Hearts */
+/* 💖 Hearts */
 .heart {
   position: absolute;
   font-size: 20px;
@@ -106,6 +42,12 @@ h1 {
 }
 
 @keyframes float {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-200px); opacity: 0; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
 }
