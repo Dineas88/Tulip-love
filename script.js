@@ -7,9 +7,7 @@ function createTulip(x) {
     <div class="leaf left"></div>
     <div class="leaf right"></div>
     <div class="stem"></div>
-    <div class="petal p1"></div>
-    <div class="petal p2"></div>
-    <div class="petal p3"></div>
+    <div class="tulip-head"></div>
   `;
 
   document.body.appendChild(tulip);
