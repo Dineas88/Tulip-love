@@ -11,6 +11,7 @@ h1 {
   text-align: center;
   color: white;
   margin-top: 20px;
+  font-size: 28px;
 }
 
 /* Tulip */
@@ -24,9 +25,9 @@ h1 {
 
 /* Stem */
 .stem {
-  width: 8px;
+  width: 6px;
   height: 0;
-  background: green;
+  background: #2e7d32;
   margin: auto;
   animation: growStem 2s forwards;
 }
@@ -37,42 +38,61 @@ h1 {
 
 /* Leaves */
 .leaf {
-  width: 60px;
-  height: 30px;
-  background: green;
+  width: 50px;
+  height: 25px;
+  background: #388e3c;
   position: absolute;
-  top: 150px;
+  top: 140px;
   border-radius: 50%;
 }
 
 .leaf.left {
-  left: -40px;
+  left: -35px;
   transform: rotate(-30deg);
 }
 
 .leaf.right {
-  right: -40px;
+  right: -35px;
   transform: rotate(30deg);
 }
 
-/* Petals */
+/* 🌷 PETALS (FIXED LOOK) */
 .petal {
-  width: 50px;
-  height: 0;
-  background: #ff4d6d;
   position: absolute;
-  top: 0;
-  left: 35px;
+  width: 35px;
+  height: 0;
+  background: linear-gradient(to top, #ff4d6d, #ff758f);
+  top: 20px;
+  left: 42px;
   border-radius: 50% 50% 0 0;
   animation: bloom 2.5s forwards;
 }
 
-.p1 { transform: rotate(0deg); }
-.p2 { transform: rotate(-20deg); }
-.p3 { transform: rotate(20deg); }
+/* Center petal */
+.p1 {
+  transform: rotate(0deg);
+  z-index: 3;
+}
 
+/* Left petal */
+.p2 {
+  transform: rotate(-25deg);
+  left: 30px;
+  z-index: 2;
+}
+
+/* Right petal */
+.p3 {
+  transform: rotate(25deg);
+  left: 54px;
+  z-index: 2;
+}
+
+/* Bloom animation */
 @keyframes bloom {
-  to { height: 100px; }
+  to {
+    height: 90px;
+  }
 }
 
 /* Hearts */
