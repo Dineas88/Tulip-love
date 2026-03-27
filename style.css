@@ -52,30 +52,19 @@ h1 {
   transform: rotate(30deg);
 }
 
+/* 🌷 Tulip Head */
 .tulip-head {
   position: absolute;
   width: 50px;
   height: 60px;
   background: #ff4d6d;
-  top: 0px;          /* 🔥 move UP */
+  top: -10px;              /* 🔥 better position */
   left: 35px;
   border-radius: 50% 50% 40% 40%;
-  z-index: 999;      /* 🔥 FORCE ABOVE EVERYTHING */
+  z-index: 10;
 }
 
 /* top bump */
-.tulip-head::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 25px;
-  background: #ff4d6d;
-  top: -12px;
-  left: 10px;
-  border-radius: 50%;
-}
-
-/* top curve */
 .tulip-head::before {
   content: "";
   position: absolute;
