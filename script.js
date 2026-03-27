@@ -1,3 +1,6 @@
+let positions = [];
+let maxTulips = 8; // limit number
+
 function createTulip(x) {
   let tulip = document.createElement("div");
   tulip.className = "tulip";
@@ -25,16 +28,36 @@ function createHeart(x, y) {
   setTimeout(() => heart.remove(), 3000);
 }
 
-/* CLICK ANYWHERE */
+/* Generate spaced tulips */
+function generatePosition() {
+  let pos;
+  do {
+    pos = Math.random() * 90;
+  } while (positions.some(p => Math.abs(p - pos) < 10)); // spacing
+
+  positions.push(pos);
+
+  if (positions.length > maxTulips) {
+    positions.shift(); // remove old ones
+  }
+
+  return pos;
+}
+
+/* CLICK EVENT */
 document.addEventListener("click", (e) => {
-  createTulip(Math.random() * 90);
+  let pos = generatePosition();
+  createTulip(pos);
 
   for (let i = 0; i < 5; i++) {
     createHeart(e.clientX, e.clientY);
   }
 });
 
-/* AUTO SHOW WHEN OPEN */
+/* AUTO LOAD (nice starting look) */
 window.onload = () => {
-  createTulip(50);
+  for (let i = 0; i < 4; i++) {
+    let pos = generatePosition();
+    createTulip(pos);
+  }
 };
