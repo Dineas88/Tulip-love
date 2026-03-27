@@ -4,10 +4,13 @@ function createTulip(x) {
   tulip.style.left = x + "vw";
 
   tulip.innerHTML = `
-    <div style="font-size:50px;">🌷</div>
+    <div style="font-size:80px;">🌷</div>
   `;
 
   document.body.appendChild(tulip);
+
+  // auto remove after some time (clean look)
+  setTimeout(() => tulip.remove(), 8000);
 }
 
 function createHeart(x, y) {
@@ -21,6 +24,7 @@ function createHeart(x, y) {
   setTimeout(() => heart.remove(), 3000);
 }
 
+/* CLICK = flowers + hearts */
 document.addEventListener("click", (e) => {
   createTulip(Math.random() * 90);
 
@@ -28,3 +32,8 @@ document.addEventListener("click", (e) => {
     createHeart(e.clientX, e.clientY);
   }
 });
+
+/* AUTO FLOATING FLOWERS */
+setInterval(() => {
+  createTulip(Math.random() * 90);
+}, 1500);
