@@ -14,7 +14,7 @@ h1 {
   font-size: 28px;
 }
 
-/* Tulip */
+/* Tulip container */
 .tulip {
   position: absolute;
   bottom: 0;
@@ -26,14 +26,9 @@ h1 {
 /* Stem */
 .stem {
   width: 6px;
-  height: 0;
+  height: 180px;
   background: #2e7d32;
   margin: auto;
-  animation: growStem 2s forwards;
-}
-
-@keyframes growStem {
-  to { height: 180px; }
 }
 
 /* Leaves */
@@ -56,43 +51,27 @@ h1 {
   transform: rotate(30deg);
 }
 
-/* 🌷 PETALS (FIXED LOOK) */
-.petal {
+/* 🌷 REAL TULIP HEAD */
+.tulip-head {
   position: absolute;
-  width: 35px;
-  height: 0;
-  background: linear-gradient(to top, #ff4d6d, #ff758f);
-  top: 20px;
-  left: 42px;
-  border-radius: 50% 50% 0 0;
-  animation: bloom 2.5s forwards;
-}
-
-/* Center petal */
-.p1 {
-  transform: rotate(0deg);
-  z-index: 3;
-}
-
-/* Left petal */
-.p2 {
-  transform: rotate(-25deg);
+  width: 60px;
+  height: 70px;
+  background: linear-gradient(to top, #ff4d6d, #ff8fab);
+  top: 40px;
   left: 30px;
-  z-index: 2;
+  border-radius: 50% 50% 40% 40%;
 }
 
-/* Right petal */
-.p3 {
-  transform: rotate(25deg);
-  left: 54px;
-  z-index: 2;
-}
-
-/* Bloom animation */
-@keyframes bloom {
-  to {
-    height: 90px;
-  }
+/* top bump (emoji look) */
+.tulip-head::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  background: inherit;
+  top: -15px;
+  left: 10px;
+  border-radius: 50%;
 }
 
 /* Hearts */
