@@ -13,11 +13,6 @@ function createTulip(x) {
   document.body.appendChild(tulip);
 }
 
-/* CLICK ONLY */
-document.addEventListener("click", (e) => {
-  createTulip(Math.random() * 90);
-});
-
 function createHeart(x, y) {
   let heart = document.createElement("div");
   heart.className = "heart";
@@ -29,6 +24,7 @@ function createHeart(x, y) {
   setTimeout(() => heart.remove(), 3000);
 }
 
+/* SINGLE CLICK EVENT ONLY */
 document.addEventListener("click", (e) => {
   createTulip(Math.random() * 90);
 
@@ -36,8 +32,3 @@ document.addEventListener("click", (e) => {
     createHeart(e.clientX, e.clientY);
   }
 });
-
-window.onload = () => {
-  createTulip(30);
-  createTulip(60);
-};
